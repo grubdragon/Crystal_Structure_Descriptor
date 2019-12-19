@@ -1,20 +1,56 @@
 # Project 2 - Machine Learning
 
-## Code Guide
+## Crystal Structure Descriptor for Machine Learning
 
-DOs:
-* Use relevant variable and function names
-* Break commits into small pieces
-* Write descriptive(very important) but small commit messages.
-* Break up notebooks into small cells(smaller the better). Try to stick to 2-3 lines. Note: This is a loose guide, some cases call for larger cell sizes BUT should be avoided.
-* When writing functions:
-    * Look for a similar function in the repo. If you can make-do with small config details, use it!
-    * Write your own function and add it to the helpers in an existing folder
-    * Modify existing functions available in the repo, if necessary, and fix all files that are affected by the change in the VERY NEXT commit.
-* Make configurable, general functions. eg. How commits on loading positive and negative files were unified.
+Stores code for our experiments with a simple crystal structure descriptor for machine learning on binary materials
 
-DON'Ts
-* Add data/pickle files in the repository
-* Make bogus commits. Keep commit history clean. (eg. Adding and removing files back to back should be avoided) This increases repo size and adds redundant lines in the commit history. 
-* Put anything in the root folder other than notebooks
-* Commiting multiple files in the same commit. 
+## Requirements
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install any required packages for the project. You will need [LightGBM](https://lightgbm.readthedocs.io/en/latest/Installation-Guide.html), [TensorFlow](https://www.tensorflow.org/install), [sklearn](https://scikit-learn.org/stable/install.html), [pandas](https://pandas.pydata.org/pandas-docs/stable/install.html), and [jupyter](https://jupyter.org/install). Note that future iterations of the project will require PyTorch too. Please look up their respectives websites to install them.
+
+## Running the project
+
+
+## Project Structure
+Model files:
+```
+-energy_models
+--4Layer_TF_binary.ipynb
+--LGBM_Boosted_Trees.ipynb
+--Linear Regression.ipynb
+-conduction_models
+--4Layer_net_TF.ipynb
+--LGBM_Boosted_Trees.ipynb
+--LogisticRegression.ipynb
+```
+
+Data files:
+```
+-data
+--descriptor
+---DescriptorData.csv
+--pkls
+---binary_cell_df.pkl
+---binary_species_list.pkl
+```
+
+Extras(Plots and others):
+```
+README.md
+-energy_models
+--Accuracy.pdf
+-conduction_models
+--Plotting.ipynb
+--ROC_binary.pdf
+```
+
+Utility files:
+```
+-data_processing
+--descriptor.py
+--descriptorExample.ipynb
+--descriptor_run.ipynb
+-helpers
+--data_utils.py
+--picklers.py
+```
