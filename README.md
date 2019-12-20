@@ -24,43 +24,43 @@ The original data was fetched from the Materials Project database (https://mater
 ## Project Structure
 Model files:
 ```
--energy_models
---4Layer_net_TF.ipynb
---LGBM_Boosted_Trees.ipynb
---Linear Regression.ipynb
--conduction_models
---4Layer_TF_binary.ipynb
---LGBM_Boosted_Trees.ipynb
---LogisticRegression.ipynb
+├── energy_models
+│   ├── 4Layer_net_TF.ipynb
+│   ├── LGBM_Boosted_Trees.ipynb
+│   └── Linear Regression.ipynb
+└── conduction_models
+    ├── 4Layer_TF_binary.ipynb
+    ├── LGBM_Boosted_Trees.ipynb
+    └── LogisticRegression.ipynb
 ```
 
 Data files:
 ```
--data
---descriptor
----DescriptorData.csv
---pkls
----binary_cell_df.pkl
----binary_species_list.pkl
+└── data
+    ├── descriptor
+    |   └── DescriptorData.csv
+    └── pkls
+        ├── binary_cell_df.pkl
+        └── binary_species_list.pkl
 ```
 
 Extras(Plots and others):
 ```
-README.md
--energy_models
---Accuracy.pdf
--conduction_models
---Plotting.ipynb
---ROC_binary.pdf
+├── README.md
+├── energy_models
+│   └── Accuracy.pdf
+└── conduction_models
+    ├── Plotting.ipynb
+    └── ROC_binary.pdf
 ```
 
 Utility files:
 ```
--data_processing
---descriptor.py
---descriptorExample.ipynb
---descriptor_run.ipynb
--helpers
---data_utils.py
---picklers.py
+├── data_processing
+|   ├── descriptor.py
+|   ├── descriptorExample.ipynb
+|   └── descriptor_run.ipynb
+└── helpers
+    ├── data_utils.py
+    └── picklers.py
 ```
